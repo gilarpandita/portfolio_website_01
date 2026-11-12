@@ -996,7 +996,7 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   .tf-grid-layout {
     --spacing: 20px;
     gap: var(--spacing);
@@ -1010,7 +1010,7 @@ a:hover {
   .tf-grid-layout.md-col-4 {
     grid-template-columns: repeat(4, 1fr);
   }
-}
+} 
 @media (min-width: 992px) {
   .tf-grid-layout {
     --spacing: 20px;
@@ -3844,9 +3844,14 @@ ANIMATION AREA CSS
   }
 }
 
+#resume .first-experience .point::after {
+    display: none !important;
+}
+
 .effect-line-hover .wrap-education-item:hover:not(:first-child) .point::after, .effect-line-hover .wrap-education-item:has(~ .wrap-education-item:hover):not(:first-child) .point::after {
   opacity: 1;
 }
+
 
 .service-item {
   position: relative;
@@ -3973,7 +3978,7 @@ ANIMATION AREA CSS
 }
 
 .portfolio-item {
-  background-image: url(../images/item/bg-portfolio-dark.png);
+  background-image: url(../images/item/bg-black.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 28px 15px;
@@ -4534,7 +4539,7 @@ ANIMATION AREA CSS
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1141px) {
   .section-about {
     height: 73vh;
   }
@@ -4579,5 +4584,70 @@ ANIMATION AREA CSS
     gap: 40px;
   }
 }
+
+
+/* Hide decorative image without removing its layout */
+.counter-item .item-shape {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Counter card normal state */
+.counter-item {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: border-color 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+}
+
+/* Counter card hover state */
+.counter-item:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15),
+                0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+/* Hide decorative images in Resume and Certifications */
+.section-resume .item-shape,
+.section-service .item-shape,
+.section-service .img-hover {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.testimonial-item.custom-quote {
+    justify-content: flex-start;
+}
+
+.testimonial-item.custom-quote {
+    height: auto;
+    min-height: 300px;
+    justify-content: space-between;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Fix Contact and Quote Alignment */
+@media (min-width: 1150px) {
+    .section-contact.style-1 .heading-section {
+        padding-top: 0 !important;
+    }
+}
+
+.certificate-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.certificate-info h5 {
+    margin-bottom: 0;
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */

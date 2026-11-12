@@ -10,6 +10,15 @@
   font-display: block;
 }
 
+@font-face {
+    font-family: 'icomoon-instagram';
+    src: url('fonts/fonts-instagram/icomoon.woff') format('woff'),
+         url('fonts/fonts-instagram/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -91,3 +100,30 @@
 .icon-dribbble:before {
   content: "\e923";
 }
+
+.icon-facebook2 {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+}
+
+.icon-facebook2:before {
+    content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-instagram {
+    font-family: 'icomoon-instagram' !important;
+}
+
+.icon-instagram:before {
+    font-family: 'icomoon-instagram' !important;
+    content: "\ea92";
+}
+
+.icon-facebook2:before {
+    font-family: 'icomoon-instagram' !important;
+    content: "\ea91" !important;
+}
+
