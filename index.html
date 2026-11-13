@@ -36,6 +36,8 @@
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
 </head>
 
+
+
 <body>
     <!-- wrapper -->
     <div id="wrapper" class="counter-scroll bg_dark">
@@ -532,9 +534,9 @@
                             
                         </div>
                         <div class="portfolio-item">
-                            <a href="images/user/porto1.jpeg" data-fancybox="gallery" class="img-style">
-                                <img decoding="async" loading="lazy" src="images/user/portfolio-item-3-1.webp"
-                                    srcset="images/user/porto1.jpeg  582w"
+                            <a href="images/user/tokobli.jpeg" data-fancybox="gallery" class="img-style">
+                                <img decoding="async" loading="lazy" src="images/user/tokobli.jpeg"
+                                    srcset="images/user/tokobli.jpeg  582w"
                                     sizes="(max-width: 582px) 100vw, 582px" width="582" height="388" alt="portfolio">
                                 <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
                                     Product Page Analysis
@@ -546,30 +548,30 @@
                             
                         </div>
                         <div class="portfolio-item">
-                            <a href="images/user/porto1.jpeg" data-fancybox="gallery" class="img-style">
-                                <img decoding="async" loading="lazy" src="images/user/porto1.jpeg"
-                                    srcset="images/user/porto1.jpeg 582w"
+                            <a href="images/user/revogrocers.jpeg" data-fancybox="gallery" class="img-style">
+                                <img decoding="async" loading="lazy" src="images/user/revogrocers.jpeg"
+                                    srcset="images/user/revogrocers.jpeg 582w"
                                     sizes="(max-width: 582px) 100vw, 582px" width="582" height="388" alt="portfolio">
                                 <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
                                     Sales Performance Analysis
                                 </div>
                             </a>
-                            <h5 class=" title font-4 text_white"> <a href="revogrocers.html" class="link">RevoGrocers Sales Performance<br>
+                            <h5 class=" title font-4 text_white"> <a href="revogrocers.html" target="_blank" class="link">RevoGrocers Sales Performance<br>
                                 Analysis</a></h5>
                             <div class="item-shape">
                                 
                             </div>
                         </div>
                         <div class="portfolio-item">
-                            <a href="images/user/porto1.jpeg" data-fancybox="gallery" class="img-style">
-                                <img decoding="async" loading="lazy" src="images/user/porto1.jpeg"
-                                    srcset="images/user/porto1.jpeg 582w"
+                            <a href="images/user/revobank.jpeg" data-fancybox="gallery" class="img-style">
+                                <img decoding="async" loading="lazy" src="images/user/revobank.jpeg"
+                                    srcset="images/user/revobank.jpeg 582w"
                                     sizes="(max-width: 582px) 100vw, 582px" width="582" height="388" alt="portfolio">
                                 <div class="tag font-3 text-label text-uppercase fw-6 letter-spacing-1">
                                     Customer Segmentation
                                 </div>
                             </a>
-                            <h5 class=" title font-4 text_white"> <a href="revobank.html" class="link">RevoBank Performance Management <br>
+                            <h5 class=" title font-4 text_white"> <a href="revobank.html" target="_blank" class="link">RevoBank Performance Management <br>
                                 Customer Segmentation
                             </a>
                             </h5>
@@ -629,10 +631,11 @@
                                         <div class="icon">
                                             <i class="icon-quote"></i>
                                         </div>
-                                        <p class="text-body-2 text_white mb_21">I had the privilege of working with Gilar during his time as a Motion Graphics and Video Editor on my team. He quickly distinguished himself as someone who not only mastered the technical side of his craft but also brought a problem-solving mindset that kept our workflows running smoothly. Whenever software issues arose, Gilar was enthusiastic in helping to find solutions and kept projects on track. What impressed me most was his willingness to step up when the team needed him most—always keeping his eyes on the goal and supporting his colleagues with sincerity and generosity. He became one of our most dependable team members, respected by peers and leaders alike. He combines technical rigor with a collaborative spirit, making him equally effective at solving problems and supporting teammates. 
+                                       <p class="text-body-2 text_white mb_21 testimonial-text">I had the privilege of working with Gilar during his time as a Motion Graphics and Video Editor on my team. He quickly distinguished himself as someone who not only mastered the technical side of his craft but also brought a problem-solving mindset that kept our workflows running smoothly. Whenever software issues arose, Gilar was enthusiastic in helping to find solutions and kept projects on track. What impressed me most was his willingness to step up when the team needed him most—always keeping his eyes on the goal and supporting his colleagues with sincerity and generosity. He became one of our most dependable team members, respected by peers and leaders alike. He combines technical rigor with a collaborative spirit, making him equally effective at solving problems and supporting teammates. 
                                             <br>
                                             <br>
                                             Gilar’s combination of technical savvy, dedication, and collaborative spirit makes him an asset to any organization. While his curiosity and adaptability mean he’s always learning, always improving, and always ready to take on new challenges</p>
+                                    <span class="testimonial-readmore" role="button" tabindex="0">...Read more</span>
                                     </div>
                                     <div class="athor">
                                         <h5 class="name text_white mb_4 font-4"> <a href="https://www.linkedin.com/in/gilarpandita/details/recommendations/?detailScreenTabIndex=0" target="_blank" class="link">Jeremiah
@@ -1203,7 +1206,21 @@
     <script src="js/main.js"></script>
     <!-- /Javascript -->
 
+<script>
+document.addEventListener('click', function(e) {
+    const button = e.target.closest('.testimonial-readmore');
 
+    if (!button) return;
+
+    const text = button.previousElementSibling;
+
+    text.classList.toggle('expanded');
+
+    button.textContent = text.classList.contains('expanded')
+        ? 'Read less'
+        : '...Read more';
+});
+</script>
 
 </body>
 

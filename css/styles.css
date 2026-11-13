@@ -4648,9 +4648,40 @@ ANIMATION AREA CSS
     margin-bottom: 0;
 }
 
+.testimonial-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
+.testimonial-text.expanded {
+    display: block;
+    overflow: visible;
+}
 
+.testimonial-readmore {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    color: var(--Primary);
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
 
+.testimonial-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial-text.expanded {
+    display: block;
+    overflow: visible;
+}
 
 
 /*# sourceMappingURL=styles.css.map */
