@@ -8,7 +8,7 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <!--[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
-    <title> Reversing the Decline: A Data-Driven Growth Plan for Baugment</title>
+    <title> RevoGrocers Sales Performance Analysis</title>
 
 
 
@@ -226,14 +226,68 @@
                                     </div>
                                 </div>
                                 <h1 class="title mb_16 split-text effect-blur-fade">
-                                    TokoBli Campaign Evaluation & Product Page Analysis
+                                    RevoGrocers Sales Performance Analysis
                                 </h1>
-                                <p class="text_muted-color font-3 mb_43 split-text split-lines-transform">TokoBli is a fictional Indonesian e-commerce company (the project is for educational purposes) that runs its biggest sales events on “twin dates”: 10.10, 11.11 and 12.12.
-                                    Each campaign has its own discount scenario plus free shipping, and transaction volume can jump to as much as ten times normal levels. Because every campaign costs real discount budget, management needs to know which scenario actually performs best, and whether the money spent on discounts is being used efficiently.
-                                    This project was built in two parts. The first part evaluates the three past campaigns using a transaction dataset of 10,159 rows and 14 columns. I framed the business problem with the SMART criteria, selected the metrics that matter for comparing campaigns (total revenue, average order value, revenue per customer, transaction count, discount cost and units sold),
-                                    cleaned the data in Google Sheets, removed outliers using the IQR method on Total Revenue, and calculated a full set of descriptive statistics for Quantity, Discount and Total Revenue.
-                                    The cleaned dataset of 10,142 rows then fed an exploratory analysis that compared the campaigns and product categories on scale, cost and discount efficiency. The second part is an A/B test of a redesigned product detail page. One thousand users were split into two groups (498 saw the current page, 502 saw the new design),
-                                    and I tested whether the new page changes transaction value in a statistically significant way. That meant checking the test assumptions, running a two-sample t-test, confirming the result with a non-parametric test, and measuring effect size, not just significance. The final output is a 26-slide deck with business recommendations structured in the OBIPR framework (Observation, Business Impact, Isolation, Prioritization, Recommendation).</p>                                
+                                <p class="text_muted-color font-3 mb_43 split-text split-lines-transform">RevoGrocers is a fictional grocery retailer that operates across multiple locations and sells a wide range of grocery products. Its goal is to use data to sharpen sales strategy, improve customer experience, and grow revenue. This project is a SQL case study from the RevoU Full Stack Data Analyst program.
+                                    I took the role of a data analyst whose job was to find out which product categories drive sales performance and why.
+                                    <br>
+                                    The analysis uses the public Kaggle Grocery Sales Dataset, which has seven relational tables (sales, products, categories, customers, cities, countries, employees). It covers 6.76 million transactions from 98,759 customers across 452 products in 11 categories, from January 1 to May 9, 2018.
+                                    The company and results are fictional and built for learning, so the findings reflect this dataset only. The brief set nine business questions:
+                                </p>
+                                    <ul style="list-style: none !important; padding-left: 0 !important;">
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>Which product category generates the highest revenue after discount?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>How does revenue after discount relate to total units sold in each category?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>How does revenue after discount relate to the number of unique customers in each category?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>What is the average price per unit for each category in the catalogue?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>How does the average price per unit relate to the number of buyers (unique customers) in each category?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>Which categories contribute most to overall revenue after discount, in percentage terms?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>Which categories have the highest repeat purchase rate?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>What do the results say overall about sales performance across categories?</span>
+                                        </li>
+                                        <li style="display: flex; gap: 12px; margin-bottom: 10px;">
+                                            <span class="text_muted-color font-3 split-text split-lines-transform" style="color: #bdbdbd;">•</span>
+                                            <span class="text_muted-color font-3 split-text split-lines-transform">
+                                            <span>What is the cumulative transaction amount of the top customer, calculated with a window function?</span>
+                                        </li>
+                                    </ul>
+                                <br>
+                                <p class="text_muted-color font-3 mb_43 split-text split-lines-transform">I answered these in Google BigQuery, wrote up the insights with the OBIPR framework (Observation, Business Impact, Isolation, Prioritization, Recommendation),
+                                    and presented the results in a slide report.
+                                    <br>
+                                    One early finding shaped the whole analysis. The TotalPrice column was 0 in all 6.76 million rows, so revenue after discount had to be derived as quantity × unit price × (1 − discount).
+                                    I also cross-checked my BigQuery output against the source CSV to make sure the category totals were reliable.
+                                </p>                                
                             </div>
                         </div>
                         <!-- End section-about -->
@@ -248,9 +302,9 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Data quality</a>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Confections is the top category.</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">the raw data needed real cleaning. One column (Status) was 99.48% empty and was dropped, 5 duplicate rows were removed, 3 missing values were rebuilt from the revenue formula, and 12 outliers above the IQR upper bound (Rp 14.1M) were removed.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">It earned about 556.9M in revenue after discount (12.85% of the total). It also leads on units sold and has the highest repeat purchase rate (99.85%).</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -263,8 +317,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link"> Campaign 11.11 wins on value</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">it had the highest revenue (Rp 16.62B), the highest average order value (Rp 4.89M), the highest revenue per customer (Rp 10.61M) and the most unique customers (1,567).</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link"> Revenue is volume-driven</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Units sold and revenue are strongly correlated (r = 0.93). Where categories break the pattern, price explains it. Produce sells more units than Snails but earns less, because its average catalogue price is lower (45.40 vs. 53.20).</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -277,9 +331,9 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Revenue gap is not about traffic</a>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Customer reach is already saturated</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">transaction counts were almost flat across campaigns (3,329 to 3,414), yet revenue differed by about 12%. The difference comes from how much each customer spends, not how many show up.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Unique customers per category sit within a narrow band (97,335 to 98,743, a 1.4% spread), while revenue varies almost 2x. The correlation between customers and revenue is only moderate (r = 0.62).</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -291,8 +345,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Campaign 12.12 wins on efficiency</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">it returned Rp 58.54 in revenue for every Rp 1 of discount, versus 54.92 for 11.11 and 53.83 for 10.10, while spending the least on discounts (Rp 252.8M).</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Higher prices go with slightly fewer buyers</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Average price and unique customers are negatively correlated (r = -0.67), a mild but real price-sensitivity signal.</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -304,8 +358,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Men’s Fashion is the standout category</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">it led revenue and unique customers in all three campaigns, and had the best discount efficiency in two of the three, finishing a close second in 10.10.</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Revenue is diversified</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Category shares range from 6.92% (Shell fish) to 12.85% (Confections). The top three (Confections, Meat, Poultry) make up 34.39% combined.</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -317,8 +371,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Discounts are under-used:</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">only 25% of orders carried any discount, and discounted orders averaged lower revenue (Rp 3.80M) than full-price orders (Rp 4.82M).</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Repeat purchase rates are very high everywhere (93.68% to 99.85%)</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">This mostly reflects heavy purchase volume, since customers average 68 transactions each, rather than category-specific loyalty.</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -330,8 +384,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Baskets are small</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">82% of orders were single-unit, with an extremely right-skewed quantity distribution (skewness 17.01).</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Grain is the consistent outlier</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">It has the highest catalogue price (61.40), the second-lowest revenue, and the lowest repeat rate (93.68%, while all other categories are above 97%).</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -343,8 +397,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">The new product page works</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Group B averaged Rp 830,460 versus Rp 746,103 for Group A, a lift of +11.31% (t = 8.00, df = 998, p < 0.001, Cohen’s d = 0.51). The 95% confidence interval (Rp 63,670 to Rp 105,045) stayed entirely positive, and a Mann-Whitney U test reached the same conclusion.</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">The top customer (ID 94800) spent 130,324.12 across 103 transactions</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">That is about 3x the average customer’s total spend, driven by larger baskets (about 2x the average transaction value) more than by visit frequency (about 1.5x).</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -369,9 +423,9 @@
                                         <span class="number text-label text_muted-color font-3">01/</span>
                                         <div class="certificate-info">
                                             <h5 class="text_white font-4">
-                                                <a href="#contact" class="link">Blend two playbooks</a>
+                                                <a href="#contact" class="link">Protect Confections</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">combine 11.11’s customer reach and order value with 12.12’s disciplined discount spending, instead of treating them as separate strategies.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Prioritize stock reliability and shelf presence, and consider widening its assortment, since it is the largest revenue driver and the category customers return to most.</span>
                                         </div>
                                     </div>
                                     <a href="#contact" class="btn-arrow"><i class="icon-ArrowRight"></i></a>
@@ -389,9 +443,9 @@
                                         <span class="number text-label text_muted-color font-3">02/</span>
                                         <div class="certificate-info">
                                             <h5 class="text_white font-4">
-                                                <a href="#contact" class="link">Give Men’s Fashion priority</a>
+                                                <a href="#contact" class="link">Shift customer strategy from acquisition to spend per customer</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">put it first in placement and promotional budget, since it is the most consistent performer on both revenue and discount efficiency.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Nearly every customer already buys from nearly every category. Loyalty programs, bundles, and replenishment nudges will do more than broad acquisition campaigns.</span>
                                         </div>
                                     </div>
                                     <a href="#contact" class="btn-arrow"><i class="icon-ArrowRight"></i></a>
@@ -409,9 +463,9 @@
                                         <span class="number text-label text_muted-color font-3">03/</span>
                                         <div class="certificate-info">
                                             <h5 class="text_white font-4">
-                                                <a href="#contact" class="link">Rework discounts on low-return categories</a>
+                                                <a href="#contact" class="link">Run a targeted test in Grain</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">test lower discount rates or different promo mechanics for categories with consistently weak revenue-to-discount ratios, such as Appliances, Kids & Baby and Superstore.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Try a modest price test or an assortment review to find out whether its weak performance comes from price sensitivity or simply lower demand.</span>
                                         </div>
                                     </div>
                                     <a href="#contact" class="btn-arrow"><i class="icon-ArrowRight"></i></a>
@@ -429,9 +483,9 @@
                                         <span class="number text-label text_muted-color font-3">04/</span>
                                         <div class="certificate-info">
                                             <h5 class="text_white font-4">
-                                                <a href="#contact" class="link">Grow basket size, not just traffic</a>
+                                                <a href="#contact" class="link">Keep investment balanced across the portfolio</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">pilot threshold-based discounts (unlocked above a minimum basket value) and “buy more, save more” bundles, starting with repeat-purchase categories.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Revenue is diversified, so give the top three categories a modest tilt in promotions without neglecting the other eight.</span>
                                         </div>
                                     </div>
                                     <a href="#contact" class="btn-arrow"><i class="icon-ArrowRight"></i></a>
@@ -449,9 +503,9 @@
                                         <span class="number text-label text_muted-color font-3">05/</span>
                                         <div class="certificate-info">
                                             <h5 class="text_white font-4">
-                                                <a href="#contact" class="link">Ship the new product page in stages</a>
+                                                <a href="#contact" class="link">Use the top customer’s profile to define a high-value segment</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">roll out from 50% to 100% of users and re-verify the lift during the next twin-date campaign, because the test ran in a normal two-week window, not a campaign peak.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">The pattern is larger baskets with moderately higher frequency. Retention offers for this segment should focus on growing basket value.</span>
                                         </div>
                                     </div>
                                     <a href="#contact" class="btn-arrow"><i class="icon-ArrowRight"></i></a>
@@ -479,7 +533,7 @@
                                         <div class="content">
                                             <h5 class="font-4 mb_4"><a href="#contact" class="link">Problem framing</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Defined the business problem as a SMART question and selected the metrics that answer it.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Turned nine business questions into a structured category-level analysis of sales performance.</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -492,8 +546,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link"> Data cleaning in Google Sheets</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Handled missing values, duplicates and data type corrections, with every removal and imputation documented.</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link"> Data exploration and validation</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Checked 6.76M sales rows for duplicates, missing values, and broken keys. Found that TotalPrice was empty and derived revenue after discount from quantity, unit price, and discount.</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -506,9 +560,9 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Outlier detection</a>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">BigQuery SQL</a>
                                             </h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Applied the IQR method to Total Revenue across the full dataset and documented the bounds and removed rows.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Wrote the queries for revenue, units sold, unique customers, catalogue pricing, revenue contribution, repeat purchase rate, and the top customer’s cumulative spend using a window function.</span>
                                         </div>                                        
                                         <div class="item-shape spotlight">
                                             <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
@@ -534,22 +588,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">EDA</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Compared the three campaigns and 15 product categories on transactions, customers, units sold, revenue, discount budget and revenue-to-discount ratio.</span>
-                                        </div>
-                                        
-                                        <div class="item-shape spotlight">
-                                            <img src="images/item/small-comet.webp" loading="lazy" decoding="async"
-                                                alt="item">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap-education-item area-effect scrolling-effect effectTop">
-                                    <span class="point"></span>
-                                    <div class="education-item">
-                                        <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">A/B hypothesis test</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Stated the hypotheses, checked normality and variance assumptions, ran the two-sample t-test, cross-checked with Mann-Whitney U, and reported confidence interval and effect size.</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Relationship analysis</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Compared revenue against volume, customer reach, and price at the category level to separate what actually drives revenue.</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -563,7 +603,7 @@
                                     <div class="education-item">
                                         <div class="content">
                                             <h5 class="font-4 mb_4"><a href="#contact" class="link">OBIPR recommendations</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Turned the statistical findings into prioritized, actionable business recommendations.</span>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Consolidated the findings into one Observation, Business Impact, Isolation, Prioritization, and Recommendation narrative.</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -576,8 +616,8 @@
                                     <span class="point"></span>
                                     <div class="education-item">
                                         <div class="content">
-                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Presentation deck</a></h5>
-                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Built a 26-slide deck covering business overview, methodology, cleaning, analysis, hypothesis testing and a final recap.</span>
+                                            <h5 class="font-4 mb_4"><a href="#contact" class="link">Slide report</a></h5>
+                                            <span class="text-body-1 font-3" style="color: #bdbdbd;">Built a presentation covering the business overview, methodology, a slide per question (SQL, query output, insight), and a recap with business recommendations.</span>
                                         </div>
                                         
                                         <div class="item-shape spotlight">
@@ -585,7 +625,7 @@
                                                 alt="item">
                                         </div>
                                     </div>
-                                </div>                              
+                                </div>                                                             
                             </div>
                         </div>
                         <!-- End section-what i delivered -->
@@ -673,6 +713,7 @@
                             <div class="swiper tf-sw-partner wrap-partner" data-preview="8" data-tablet="8"
                                 data-mobile-sm="6" data-mobile="4" data-space="15" data-space-md="30"
                                 data-space-lg="30">
+                                <!--
                                 <div class="swiper-wrapper ">
                                     <div class="swiper-slide">
                                         <a href="#" class="partner-item item-1 sz-100 scrolling-effect effectZoomIn"
@@ -681,7 +722,7 @@
                                             <div class="item-shape">                                                
                                             </div>
                                         </a>
-                                    </div>  
+                                    </div>  -->
                                     <div class="swiper-slide">
                                         <a href="#" class="partner-item item-8 sz-160 scrolling-effect effectZoomIn"
                                             data-delay="0.5">
